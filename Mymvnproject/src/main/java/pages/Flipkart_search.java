@@ -28,6 +28,7 @@ public class Flipkart_search extends Flipkartbase
 		if(driver.getTitle().contains(searchword))
 		{
 			Reporter.log("<font color='blue'<b>Still nothing is searched in the site</b></font>");
+			System.out.println("Hello");
 		}
 		
 	}
