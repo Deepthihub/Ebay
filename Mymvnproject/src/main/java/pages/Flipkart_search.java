@@ -37,7 +37,11 @@ public class Flipkart_search extends Flipkartbase
 
 			Reporter.log("<font color='blue'<b>Still nothing is searched in the site</b></font>");
 			System.out.println("Hello");
+
 			System.out.println("Hi");
+
+			System.out.println("Good");
+
 
 		}
 		
