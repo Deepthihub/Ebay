@@ -29,10 +29,15 @@ public class Flipkart_search extends Flipkartbase
 	{
 		if(driver.getTitle().contains(searchword))
 		{
+
 			//Reporter.log("<font color='blue'<b>Still nothing is searched in the site</b></font>");
 			exttest=report.createTest("Validate Title");
 			exttest.log(Status.PASS, "Title before searching item");
 			takescreenshot("Validate_Title.png");
+
+			Reporter.log("<font color='blue'<b>Still nothing is searched in the site</b></font>");
+			System.out.println("Hello");
+
 		}
 		
 	}
