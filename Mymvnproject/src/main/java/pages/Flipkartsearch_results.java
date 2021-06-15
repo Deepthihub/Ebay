@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
+import com.aventstack.extentreports.Status;
+
 import base.Flipkartbase;
 import pObjects.Flipkartresults_page;
 
@@ -14,7 +16,12 @@ public class Flipkartsearch_results extends Flipkartbase
 	{
 		if(driver.getTitle().contains(searchword))
 		{
-			Reporter.log("<font color='green'<b>Searched Mobiles</b></font>");
+			//Reporter.log("<font color='green'<b>Searched Mobiles</b></font>");
+			exttest=report.createTest("Validate Searched Title");
+			exttest.log(Status.PASS, "Title is valid");
+			takescreenshot("Flipkart_SearchedTitle.png");
+			System.out.println("Thank you");
+			
 		}
 		
 	}
@@ -47,9 +54,13 @@ public class Flipkartsearch_results extends Flipkartbase
 			
 		}
 		
-		Reporter.log("<font color='orange'><b>First Mobile name : </b></font>"+Flipkartresults_page.mobilenames.get(0).getText());
+		//Reporter.log("<font color='orange'><b>First Mobile name : </b></font>"+Flipkartresults_page.mobilenames.get(0).getText());
 		//System.out.println("It's price : "+Flipkartresults_page.prices.get(0).getText());
-		Reporter.log("<font color='orange'><b>It's price : </b></font>"+total);
+		//Reporter.log("<font color='orange'><b>It's price : </b></font>"+total);
+		
+		exttest=report.createTest("First Mobile Info");
+		exttest.log(Status.INFO, "Mobile Name : "+Flipkartresults_page.mobilenames.get(0).getText()+"It's price : "+total);
+		
 	}
 }
 
